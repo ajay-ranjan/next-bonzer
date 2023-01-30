@@ -10,30 +10,35 @@ import Typography from '@mui/material/Typography';
 export default function CommonList({listArray}) {
     // const  key_features=[{name:"From MNC working developers", image:"", description:" Learn skills From Experienced programmers"},{name:"Coding practice", image:"", description:"Fully practice based Approach"}]
   return (
-    <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+    <List sx={{ width: '100%', maxWidth: 360 }} className=" dark:text-white">
         {
             listArray.map((item, index)=>{
                 return(
-                    <div key={index}>
-                        <ListItem alignItems="flex-start">
+                    <div key={index} className="text-blue-700 dark:text-white">
+                        <ListItem >
                           {/* {item.image && 
                             <ListItemAvatar>
                                 <Avatar alt="Remy Sharp" src={item.image} />
                             </ListItemAvatar>
                           } */}
                           <ListItemText
-                                primary={item.name}
+                                primary={item.name.toUpperCase()}
+                                // className=""
                                 secondary={
                                     <React.Fragment>
                                     <Typography
                                         sx={{ display: 'inline' }}
                                         component="span"
-                                        variant="body2"
-                                        color="text.primary"
+                                        variant="body1"
+                                        // color="text.primary"
                                     >
                                         {""}
-                                    </Typography>
+                                    <span
+                                     className='text-gray-600 dark:text-gray-200 italic'
+                                     >
                                     {item.description}
+                                    </span>
+                                    </Typography>
                                     </React.Fragment>
                                 }
                             />

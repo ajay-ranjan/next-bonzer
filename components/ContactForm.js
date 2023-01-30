@@ -6,7 +6,7 @@ import Spinner from './utilities/Spinner'
 const ContactForm = () => {
     const [loading, setloading] = useState(false)
     const formData={
-        title:"Contact Me",
+        title:"Get in touch",
         // formLogo:"FORM_LOGO",
         submitBtnText:"",
         cancelBtnText:"",

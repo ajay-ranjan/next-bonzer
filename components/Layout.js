@@ -10,11 +10,11 @@ const Layout = ({children}) => {
             <title>{appDetails.APP_TITLE}</title>
             <link rel="icon" href="/favicon.ico" />
         </Head>
-        <div className="flex justify-between align-items-center flex-col min-h-screen ">
+        <div className="flex justify-between align-items-center flex-col min-h-screen bg-white dark:bg-gray-700">
             {/* <h2 className="text-blue-700" >Hello</h2> */}
             <main>
                 <NavBar />
-                <div className="max-w-screen-xl px-8 py-8 mx-auto">
+                <div className="max-w-screen-xl px:2 sm:px-8 py-8 mx-auto">
                     {children}
                 </div>
             </main>

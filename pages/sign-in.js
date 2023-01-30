@@ -55,7 +55,7 @@ export default  function SignIn() {
     <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs">
         <CssBaseline />
-  <h2>{status ? "True" : "False"}</h2>
+  {/* <h2>{status ? "True" : "False"}</h2> */}
 
         <Box
           sx={{
@@ -64,6 +64,7 @@ export default  function SignIn() {
             flexDirection: 'column',
             alignItems: 'center',
           }}
+          className="p-6 shadow-2xl"
         >
           <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
             <LockOutlinedIcon />

@@ -41,7 +41,7 @@ const handleSubmit=async(evt) => {
                 formData.formFields.map((field, index)=>{
                     return (
                             (field.type==="text" || field.type==="email" || field.type==="password" || field.type==="number" || field.type==="tel") ?
-                            <div className='m-1 p-2 mx-5 flex justify-between' key={index}>
+                            <div className='m-1 p-2 mx-5 flex justify-center' key={index}>
                                 {/* <label className=''>{field.label} {field.required && "*"}</label> */}
                                 <input className={field.className + 
                                 "form-control block  w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"} 
@@ -50,7 +50,7 @@ const handleSubmit=async(evt) => {
                                     name={field.name} placeholder={field.placeHolder} type={field.type} required={field.required} />
                             </div>
                             : field.type==="select" ?
-                            <div className='m-1 p-2 mx-5 flex justify-between' key={index}>
+                            <div className='m-1 p-2 mx-5 flex justify-center' key={index}>
                                 {/* <label className=''>{field.label} {field.required && "*"}</label> */}
                                 <select  className={field.className + " form-control block  w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none "}  
                                     name={field.name}
@@ -63,7 +63,7 @@ const handleSubmit=async(evt) => {
                                 </select>
                             </div>
                             : field.type==="radio" ?
-                            <div className='m-1 p-2 mx-5 flex justify-between' key={index}>
+                            <div className='m-1 p-2 mx-5 flex justify-center' key={index}>
                                 <label className='w-full font-bold'>{field.label} {field.required && "*"}</label>
                                 {field.options.map((item, index)=> <div key={index} className={field.className + " p-1  w-full w-1/4"} >
                                     <label>{item.label}</label>
@@ -77,16 +77,16 @@ const handleSubmit=async(evt) => {
                                 
                             </div>
                             : field.type==="checkbox" ?
-                            <div className='m-1 p-2 mx-5 flex justify-between' key={index}>
+                            <div className='m-1 p-2 mx-5 flex justify-center' key={index}>
                                 <input className={field.className + "form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain mr-2 cursor-pointer     "} 
-                                    defaultChecked={defaultFieldValues[field.name] || false}
+                                    defaultChecked={defaultFieldValues[field.name] || true}
                                     onChange={handleChange}
                                     name={field.name} placeholder={field.placeHolder} type={field.type} required={field.required} />
                                     <label className='form-check-label inline-block text-gray-800'>{field.label} {field.required && "*"}</label>
                             </div>
                             :                                                                   
                              field.type==="textarea" ?
-                            <div className='m-1 p-2 mx-5 flex justify-between' key={index}>
+                            <div className='m-1 p-2 mx-5 flex justify-center' key={index}>
                                 {/* <label className=''>{field.label} {field.required && "*"}</label> */}
                                 <textarea className={field.className + "form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none "} 
                                 onChange={handleChange}
@@ -94,7 +94,7 @@ const handleSubmit=async(evt) => {
                             </div>
                              :                                                                   
                              field.type==="file" ?
-                            <div className='m-1 p-2 mx-5 flex justify-between' key={index}>
+                            <div className='m-1 p-2 mx-5 flex justify-center' key={index}>
                                 {/* <label className=''>{field.label} {field.required && "*"}</label> */}
                                 <input className={field.className + "form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none "} 
                                 onChange={handleChange}
@@ -104,19 +104,35 @@ const handleSubmit=async(evt) => {
                     )
                 })
             }
-           <div className=''>
-                <Button 
+           <div className='w-100'>
+                <div className='w-100 mx-5 flex justify-center'>
+                    <button 
+                        type={"submit"}
+                        loading={loading || false}
+                        // title={ formData.submitBtnText || "Submit"}
+                        className="w-full 
+                         bg-blue-500 m-1 p-2 text-blue-50"
+                    >{ formData.submitBtnText || "Submit"}</button>
+                {/* <button 
+                    type={"reset"}
+                    // title={ formData.resetBtnText || "Reset"}
+                    // onClick={handleCancel}
+                    className="w-1/3 
+                     bg-gray-500 m-1 p-2 text-gray-50 "
+                >{ formData.resetBtnText || "Reset"}</button> */}
+                </div>
+                {/* <button 
                     type={"submit"}
                     loading={loading || false}
                     title={ formData.submitBtnText || "Submit"}
-                    className="w-full"
+                    className="w-full bg-blue-500"
                 />
-                <Button 
+                <button 
                     type={"reset"}
                     title={ formData.resetBtnText || "Reset"}
                     // onClick={handleCancel}
-                    className="w-full bg-red-500 "
-                />
+                    className="w-full bg-blue-500 "
+                /> */}
            </div>
             {/* <Button 
                 type={"reset"}
@@ -127,7 +143,7 @@ const handleSubmit=async(evt) => {
             <button className='bg-red-500 m-2 px-2 rounded text-red-50' type='button' onClick={handleCancel} >{ formData.cancelBtnText || "Cancel"}</button> */}
 
         </form>
-        <div>
+        <div className='p-5'>
             { formData.additonalLinks && 
                 formData.additonalLinks.map((link, index)=>{
                     return (

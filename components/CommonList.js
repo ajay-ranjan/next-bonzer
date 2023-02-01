@@ -10,11 +10,11 @@ import Typography from '@mui/material/Typography';
 export default function CommonList({listArray}) {
     // const  key_features=[{name:"From MNC working developers", image:"", description:" Learn skills From Experienced programmers"},{name:"Coding practice", image:"", description:"Fully practice based Approach"}]
   return (
-    <List sx={{ width: '100%', maxWidth: 360 }} className=" dark:text-white">
+    <List sx={{ width: '100%', maxWidth: 360 }} className="">
         {
             listArray.map((item, index)=>{
                 return(
-                    <div key={index} className="text-blue-700 dark:text-white">
+                    <div key={index} className="text-blue-700">
                         <ListItem >
                           {/* {item.image && 
                             <ListItemAvatar>
@@ -34,7 +34,7 @@ export default function CommonList({listArray}) {
                                     >
                                         {""}
                                     <span
-                                     className='text-gray-600 dark:text-gray-200 italic'
+                                     className='text-gray-600  italic'
                                      >
                                     {item.description}
                                     </span>

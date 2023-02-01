@@ -20,8 +20,8 @@
         //     selling_price:"25000",
         // }
       return (
-        <Card sx={{ maxWidth: 345 }} className=" bg-white dark:bg-gray-600 text-gray-700 dark:text-red-50
-        hover:scale-105 transition ease-in-out duration-1000  
+        <Card sx={{ maxWidth: 345 }} className=" bg-white text-gray-700
+        
         ">
           <div 
             // className='flex justify-space-between min-h-100 flex-col  '
@@ -46,7 +46,7 @@
                 //  color="text.secondary"
                 // className="text-gray-600 dark:text-gray-200"
                 >
-                  <span className='text-gray-700 dark:text-gray-100' >
+                  <span className='text-gray-700' >
                     {course.overview}
                   </span>
                 </Typography>
@@ -56,7 +56,7 @@
           </div>
             <CardActions className=' bottom-0 w-full flex justify-end'>
               {/* <Button size="small" className='dark:bg-blue-700 dark:text-white hover:border-blue-700 hover:border-solid border-2'>Share</Button> */}
-              <Button size="small" className='dark:bg-blue-700 dark:text-white hover:border-blue-700 hover:border-solid border-2'>Learn More</Button>
+              <Button size="small" className=' hover:border-blue-700 hover:border-solid border-2'>Learn More</Button>
             </CardActions>
         </Card>
         );

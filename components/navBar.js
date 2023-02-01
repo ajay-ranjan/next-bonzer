@@ -14,6 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import Link from 'next/link';
 import { appDetails } from '../constants/appDetails';
+import logo from '../public/logo1.png'
 
 const pages = [
   {id:1, title:'Home', link:'/'}, 
@@ -121,7 +122,8 @@ function NavBar() {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+          {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
+          <img src={logo} alt='Logo' className='w-32' />
           <Typography
             variant="h5"
             noWrap

@@ -34,7 +34,7 @@ const Testimonial = () => {
           {
             slidesData.map((slide, index)=>{
               return(
-                <TestimonialSlide detail={slide} />
+                <TestimonialSlide key={index} detail={slide} />
               )
             })
           }
@@ -46,3 +46,6 @@ const Testimonial = () => {
 };
 
 export default Testimonial;
+
+
+// Aarti => StatusNeo => UsBased => ggn => Bachelor 2nd Feb 5 pm

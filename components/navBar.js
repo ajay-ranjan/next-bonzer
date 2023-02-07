@@ -18,11 +18,11 @@ import logo from '../public/logo1.png'
 
 const pages = [
   {id:1, title:'Home', link:'/'}, 
-  {id:2, title:'Courses', link:'courses'},
-  // {id:3, title:'Sign in', link:'sign-in'},
-  // {id:4, title:'Sign up', link:'sign-up'},
-  {id:5, title:'About', link:'about'},
-  {id:6, title:'Contact', link:'contact'},
+  {id:2, title:'Courses', link:'/courses'},
+  // {id:3, title:'Sign in', link:'/sign-in'},
+  // {id:4, title:'Sign up', link:'/sign-up'},
+  {id:5, title:'About', link:'/about'},
+  {id:6, title:'Contact', link:'/contact'},
 
 ];
 const settings = [
@@ -62,7 +62,7 @@ function NavBar() {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
           <Typography
             variant="h6"
             noWrap
@@ -78,7 +78,7 @@ function NavBar() {
               textDecoration: 'none',
             }}
           >
-            {appDetails.APP_LOGO}
+            {/* {appDetails.APP_LOGO} */}
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -123,7 +123,7 @@ function NavBar() {
             </Menu>
           </Box>
           {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
-          <img src={logo} alt='Logo' className='w-32' />
+          <img src={"/bc_logo.png"} alt='Logo' className='w-32' />
           <Typography
             variant="h5"
             noWrap

@@ -7,7 +7,7 @@ import { saveData } from '../../../services/apiServices'
 const addCourse = () => {
     const [loading, setloading] = useState(false)
     const formData={
-        title:"Contact Me",
+        title:"Add course",
         // formLogo:"FORM_LOGO",
         submitBtnText:"",
         cancelBtnText:"",
@@ -16,6 +16,12 @@ const addCourse = () => {
             {id:2, name:"course_title", label:"course_title", placeHolder:"Enter course_title!", type:"text", required:true },
             {id:3, name:"description", label:"description.", placeHolder:"Enter description!", type:"textarea", required:true, pattern:"[0-9]{3}-[0-9]{2}-[0-9]{3}" },
             {id:4, name:"overview", label:"overview", placeHolder:"Enter overview!", type:"textarea", required:false },
+            {id:14, name:"features", label:"features", placeHolder:"Enter features!", type:"arrayFields", required:false,
+                fields:[
+                            {id:15, name:"feature_title", label:"feature_title", placeHolder:"Enter feature_title!", type:"text", required:true },
+                            {id:16, name:"feature_description", label:"Feature description.", placeHolder:"Enter feature description!", type:"textarea", required:true, pattern:"[0-9]{3}-[0-9]{2}-[0-9]{3}" },
+                        ]
+            },
             {id:5, name:"selling_price", label:"selling_price", placeHolder:"Enter selling_price!", type:"textarea", required:false },
             {id:6, name:"discount", label:"discount", placeHolder:"Enter discount!", type:"textarea", required:false },
             {id:7, name:"selling_price", label:"selling_price", placeHolder:"Enter selling_price!", type:"textarea", required:false },
@@ -29,9 +35,9 @@ const addCourse = () => {
             //     link:"/about",
             // },
             {
-                id:2, 
+                id:22, 
                 name:"checkoutCourses",
-                title:"Checkout out our                      courses!",
+                title:"Checkout out our courses!",
                 link:"/courses",
             },
         ]

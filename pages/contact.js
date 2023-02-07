@@ -46,7 +46,7 @@ const contact = () => {
                 <PublicOutlined className="bg-blue-500 rounded-full text-blue-100 p-2 m-1 text-3xl" />
               </span>
               Website:
-            <a href="www.test.com" className="hover:text-blue-800"> www.test.com</a>
+            <a href="https://www.test.com" className="hover:text-blue-800"> www.test.com</a>
             </label>
 
           </div>

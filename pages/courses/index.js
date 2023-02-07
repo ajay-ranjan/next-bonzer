@@ -4,7 +4,7 @@ const Courses = () => {
   const courses=[
     {
       id:"1",
-      course_title:"MernStack Developement",
+      course_title:"MernStack Developement Course for Begineers",
       images:[],
       course_name:"mern_stack_full_time",
       overview:"Full time course for Mern Stack developement. Internship includes realTime Projects after training.",

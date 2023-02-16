@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import React from 'react'
 import { useEffect } from 'react';
 import { useContext } from 'react';
+import UploadFile from '../components/features/UploadFile';
 import authContext from '../context/authContext';
 import AuthRoute from '../features/AuthRoute';
 
@@ -21,7 +22,7 @@ const profile = () => {
               <img src='https://lh3.googleusercontent.com/ogw/AAEL6si_YmpmiB5nrzYkQXek-Bad9CXsGKgr0ZyJCUmD5Q=s32-c-mo' alt='Profile Image' className='w-48 rounded-full border-solid border-2 border-green-600 m-2'
                />
                <div className='w-full text-center'>
-                
+                <UploadFile />
               <span className=' text-lg font-extrabold'>{" Akanksha Sharma "}</span>
                </div>
               </div>
@@ -107,6 +108,7 @@ const profile = () => {
         </div>
       </div>
     </div>
+    // </AuthRoute>
   )
 }
 

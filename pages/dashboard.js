@@ -5,7 +5,7 @@ import AuthRoute from '../features/AuthRoute'
 import { getData, saveData } from '../services/apiServices'
 
 const dashboard = () => {
-  const [loading, setloading] = useState(true)
+  const [loading, setloading] = useState(false)
 
   const {status, user, setUser}  = useContext(authContext);  
 
@@ -17,7 +17,7 @@ const dashboard = () => {
         if(res.status===200){
             console.log(`${JSON.stringify(res)}`)
             // console.log(res);
-            setUser(res.data.user)
+            // setUser(res.data.user)
         }
         else{
             console.log(`${JSON.stringify(res.response)}`)
@@ -26,18 +26,18 @@ const dashboard = () => {
     setTimeout(() => {
         setloading(false)
     }, 500); 
-    return {status:true}
+    // return {status:true}
    }
 
   useEffect(() => {
-    status && loadProfile()
+    // status && loadProfile()
   }, [])
   
   return (
     // <AuthRoute>
       <div>
         {
-          !status ? "Not Logged In" :
+          // !status ? "Not Logged In" :
           loading ? "Loading..." : 
           <div> 
             <h2>Name:  {user.name} </h2>

@@ -21,8 +21,9 @@ export default function CommonList({listArray}) {
                                 <Avatar alt="Remy Sharp" src={item.image} />
                             </ListItemAvatar>
                           } */}
+                          {console.log(item)}
                           <ListItemText
-                                primary={item.name.toUpperCase()}
+                                primary={item.feature_title?.toUpperCase()}
                                 // className=""
                                 secondary={
                                     <React.Fragment>
@@ -36,7 +37,7 @@ export default function CommonList({listArray}) {
                                     <span
                                      className='text-gray-600  italic'
                                      >
-                                    {item.description}
+                                    {item.feature_description}
                                     </span>
                                     </Typography>
                                     </React.Fragment>

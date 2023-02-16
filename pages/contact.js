@@ -2,6 +2,7 @@ import React from "react";
 import ContactForm from "../components/ContactForm";
 import Divider from "@mui/material/Divider";
 import { EmailRounded, LocationOnRounded, PhoneAndroidRounded, PublicOutlined, WebStories } from "@mui/icons-material";
+import Requests from "./requests";
 
 
 const contact = () => {
@@ -28,7 +29,7 @@ const contact = () => {
                 <PhoneAndroidRounded className="bg-blue-500 rounded-full text-blue-100 p-2 m-1 text-3xl" />
               </span>
               Phone:
-            <a href="tel:+91-01234567890"> +91-01234567890</a>
+            <a href="tel:+91-8521052424"> +91-8521 05 2424</a>
             </label>
           </div>
           <div className="flex my-4 ">
@@ -37,7 +38,7 @@ const contact = () => {
                 <EmailRounded className="bg-blue-500 rounded-full text-blue-100 p-2 m-1 text-3xl" />
               </span>
               Email:
-            <a href="mailto:testing@test.com" className="hover:text-blue-800"> testing@test.com</a>
+            <a href="mailto:info@bonzercode.com" className="hover:text-blue-800"> info@bonzercode.com</a>
             </label>
           </div>
           <div className="flex my-4 ">
@@ -46,7 +47,7 @@ const contact = () => {
                 <PublicOutlined className="bg-blue-500 rounded-full text-blue-100 p-2 m-1 text-3xl" />
               </span>
               Website:
-            <a href="https://www.test.com" className="hover:text-blue-800"> www.test.com</a>
+            <a href="https://bonzercode.com" className="hover:text-blue-800"> https://bonzercode.com</a>
             </label>
 
           </div>
@@ -54,6 +55,7 @@ const contact = () => {
         <div className="p-2 sm:w-1/2">
           <ContactForm />
         </div>
+        {/* <Requests /> */}
       </div>
 
     </div>

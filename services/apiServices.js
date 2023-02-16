@@ -55,9 +55,25 @@
         return res;
     }
     
+    export const uploadData=async (url, data)=>{
+        // Re-factored code for API call using fetch    
+        console.log("data>>>>",data);
+        let res= await apiCall.put(url, data).then(res=>res).catch(err=>err);  
+        return res;
+    }
     
     
-    
+    // const onSelectFile = async (event) => {
+    //     const file = event.target.files[0];
+    //     const convertedFile = await convertToBase64(file);
+    //     const s3URL = await axios.post(
+    //         'http://localhost:3001/upload',
+    //         {
+    //             image: convertedFile,
+    //             imageName: file.name
+    //         }
+    //     );
+    // }
     
     
     

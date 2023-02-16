@@ -28,17 +28,26 @@ const handleSubmit=async(evt) => {
     // const data=new Form
      let {name, value, type, required, checked}=evt.target;
      value=type==="checkbox" ? checked : value;
-     console.log("","formInputs[parent][index]>>>", formInputs[parent] ? formInputs[parent] : "NOdata", "formInputs>>", formInputs )
-     parent ?  setFormInputs(
+     console.log("index>>>",index, "formInputs>>", formInputs )
+     parent ?  
+        setFormInputs(
         {...formInputs, 
-            [parent]:formInputs[parent]?.length ? [formInputs[parent].filter((e,i)=>i!==index && e) , {...formInputs[parent][index] ,[name]:value}] : [{[name]:value}]
+            [parent]: formInputs[parent]?.length ?
+             [...formInputs[parent].filter((e,i)=>i!==index && e) , {...formInputs[parent][index] ,[name]:value}] 
+             : [{[name]:value}]
         }) 
+        // setFormInputs(
+        //     {...formInputs, 
+        //         [parent]: formInputs[parent]?.length ?
+        //          [...formInputs[parent].map((e,i)=>{ console.log(i, "=>" ,index ,">>",i!==index ? e : {...formInputs[parent][index] ,[name]:value}); return i!==index ? e : {...formInputs[parent][index] ,[name]:value}})]
+        //          : [{[name]:value}]
+        //     })
         :
         setFormInputs({...formInputs, [name]:value})
   }
 
   const formFields=(fields, parentName=null, fieldIndex=null)=>{
-    console.log(parentName)
+    // console.log(parentName)
    return  fields.map((field, index)=>{
         return (
                 (field.type==="text" || field.type==="email" || field.type==="password" || field.type==="number" || field.type==="tel") ?
@@ -207,7 +216,7 @@ const handleSubmit=async(evt) => {
                 <div className='w-100 mx-5 flex justify-center'>
                     <button 
                         type={"submit"}
-                        loading={loading || false}
+                        // loading={loading}
                         // title={ formData.submitBtnText || "Submit"}
                         className="w-full 
                          bg-blue-500 m-1 p-2 text-blue-50"

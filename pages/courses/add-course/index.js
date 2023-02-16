@@ -22,9 +22,9 @@ const addCourse = () => {
                             {id:16, name:"feature_description", label:"Feature description.", placeHolder:"Enter feature description!", type:"textarea", required:true, pattern:"[0-9]{3}-[0-9]{2}-[0-9]{3}" },
                         ]
             },
-            {id:5, name:"selling_price", label:"selling_price", placeHolder:"Enter selling_price!", type:"textarea", required:false },
-            {id:6, name:"discount", label:"discount", placeHolder:"Enter discount!", type:"textarea", required:false },
-            {id:7, name:"selling_price", label:"selling_price", placeHolder:"Enter selling_price!", type:"textarea", required:false },
+            {id:5, name:"price", label:"price", placeHolder:"Enter price!", type:"number", required:false },
+            {id:6, name:"discount", label:"discount", placeHolder:"Enter discount!", type:"number", required:false },
+            {id:7, name:"selling_price", label:"selling_price", placeHolder:"Enter selling_price!", type:"number", required:false },
             // {id:8, name:"images", label:"Images", placeHolder:"Enter Images!", type:"file", required:false },
         ],
         additonalLinks:[

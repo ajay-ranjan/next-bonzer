@@ -7,7 +7,7 @@
     import Typography from '@mui/material/Typography';
     import CommonList from './CommonList';
     
-    export default function CourseCard({course}) {
+    export default function CourseCard({course, deleteCourse}) {
         // const course={
         //     course_title:"MernStack Developement",
         //     images:[],
@@ -53,13 +53,15 @@
                     {course.overview}
                   </span>
                 </Typography>
-                <CommonList listArray={course.key_features} />
+                <CommonList listArray={course.features} />
               </CardContent>
             </div>
           </div>
             <CardActions className=' bottom-0 w-full flex justify-end'>
               {/* <Button size="small" className='dark:bg-blue-700 dark:text-white hover:border-blue-700 hover:border-solid border-2'>Share</Button> */}
               <Button size="small" className=' hover:border-blue-700 hover:border-solid border-2'>Learn More</Button>
+              <Button size="small" className=' bg-red-500 hover:border-red-700 hover:border-solid border-2' onClick={() => { deleteCourse(course._id) }}>Delete</Button>
+
             </CardActions>
         </Card>
         );

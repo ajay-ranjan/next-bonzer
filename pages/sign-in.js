@@ -32,7 +32,7 @@ export default  function SignIn() {
     setloading(true)
     localStorage.removeItem("bonzerCode");
     const data = new FormData(event.currentTarget);
-    let res=await saveData("auth/login",{
+    let res=await saveData("auth/login_user",{
       email: data.get('email'),
       password: data.get('password'),
     })
@@ -40,6 +40,7 @@ export default  function SignIn() {
       res.data && res.data.token && localStorage.setItem("bonzerCode",JSON.stringify({token:res.data.token}))
       setToken(res.data.token);
       setStatus(true);
+      setUser(res.data.user)
       setTimeout(() => {
         router.push("dashboard")
         setloading(false)
